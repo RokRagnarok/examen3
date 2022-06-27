@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, Button, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 
-function Box({ id, title, juego}) {
+function Box({ id, title, image}) {
 
     const navigation = useNavigation();
     
@@ -12,23 +12,23 @@ function Box({ id, title, juego}) {
             
             <Image
            style={{
-           width: 21,
-           height: 21,
+           width: 51,
+           height: 51,
+           flexDirection: 'center',
             resizeMode: 'contain'
              }}
            source={{
-         url: 'https://images-na.ssl-images-amazon.com/images/I/51848OMGGeL.png'
-    
-                }}
-  
-
-
-  
+         uri: 'https://images-na.ssl-images-amazon.com/images/I/51848OMGGeL.png'
+        
+               
+        }}
+        
 />
 
 
             <Text>Juego {id}</Text>
             <Text> {title}</Text>
+        
             
             <Button
                 color="#455a64"
@@ -36,8 +36,6 @@ function Box({ id, title, juego}) {
                 onPress={
                     () => navigation.navigate('Juego', {
                         id: id,
-                        
-                        
                         title: title,
                         
                     })
@@ -45,6 +43,7 @@ function Box({ id, title, juego}) {
             />
   
         </View>
+    
     );
 }
 
@@ -57,7 +56,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'red',
         borderWidth: 8,
         borderRadius: 15,
-        borderBottom: 8,
         margin: 15,
     }
 })

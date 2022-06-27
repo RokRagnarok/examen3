@@ -7,7 +7,9 @@ function HomeScreen({navigation}) {
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'black'}}>
 
         <View style={styles.container}>
+          
             <Text style={styles.text}><h1><font color='red'>Pagina de VideoJuegos</font></h1></Text>
+            <Text style={styles.text}><h2><font color='red'>BIENVENIDO VAMOS A JUGAR</font></h2></Text>
             <Image
           style={{
             width: 120,

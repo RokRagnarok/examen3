@@ -17,15 +17,15 @@ function calculateText(number,random){
     if(diff < soClose){
         
         if(number < random){
-        return "Ya casi esta solo te falta un poco!!!";
+        return "Solo un poco mas y aciertas";
         }else{
-        return "Ya casi esta solo te pasaste un poco!!!";
+        return "Te pasaste un poco pero estas cerca";
         }
     }else{
         if(number < random){
-            return "El numero es bajo!!";
+            return "El numero es bajo";
         }else{
-            return "El numero es alto!!";
+            return "El numero es alto";
         }
     }
 }
@@ -72,20 +72,22 @@ function GuessNumber(props){
             <TextInput
                 style={styles.input}
                 autoFocus
-                placeholder="Adivina el Numero"
+                placeholder="PON UN NUMERO"
                 onChangeText={handleOnChange}
                 defaultValue = {number}
             />
 
             <Button
-                title="Elegir Numero"
+               color = "green"
+               marginBottom = "10px"
+                title="Prueba tu suerte"
                 onPress={handleOnPress}
             />
 
             {
                 win?
                 <Text>
-                    Has Adivinado en tan solo {count} intentos.
+                    Adivinaste en  {count} intentos.
                 </Text>
                 :
                 <Text>

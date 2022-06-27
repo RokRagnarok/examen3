@@ -7,7 +7,6 @@ import tasks from './data/task';
 function MenuScreen() {
     return (
         <View style={styles.root}>
-            
 
             <View style={styles.containerBox}>
           
@@ -17,8 +16,7 @@ function MenuScreen() {
                         <Box 
                         
                             key={i}
-                            id = {task.id}
-                            juego = {task.juego}    
+                            id = {task.id}  
                             title={task.title}   
                             
                                               
@@ -36,12 +34,12 @@ function MenuScreen() {
 const styles = StyleSheet.create({
     root: {
         flex: 1,
-        flexDirection: 'column',
+        flexDirection: 'row',
         backgroundColor: 'orange',
     },
 
     containerBox: {
-        flexDirection: 'column',
+        flexDirection: 'center',
     
         flexWrap: 'center'
         

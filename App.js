@@ -8,9 +8,12 @@ import MenuScreen from './MenuScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import DetailScreen from './DetailScreen';
 import GuessNumber from './Components/GuessNumber';
+import Header from './Components/Header';
+import Card from './Components/Card';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  
   return (
     <NavigationContainer>
       
@@ -34,7 +37,7 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} options={{tabBarBadge: 3,title: 'INICIO' }} /> 
         <Tab.Screen name="Tasks" component={MenuScreen} options={{tabBarBadge: 3, title: 'JUEGOS'}} />
         <Tab.Screen name="Juego" component={DetailScreen} options={{tabBarBadge: 3, title: 'Juego'}}/>
-        
+
       </Tab.Navigator>
     </NavigationContainer>
   );
